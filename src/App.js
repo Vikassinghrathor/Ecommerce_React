@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+import Items from './components/Items/Items'; // Import ProductScreen component
 
-function App() {
+const App = () => {
+  const productsArr = [
+    {
+      title: 'Colors',
+      price: 100,
+      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
+    },
+    {
+      title: 'Black and white Colors',
+      price: 50,
+      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
+    },
+    {
+      title: 'Yellow and Black Colors',
+      price: 70,
+      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
+    },
+    {
+      title: 'Blue Color',
+      price: 100,
+      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <Items productsArr={productsArr} />
+    </>
   );
 }
 
