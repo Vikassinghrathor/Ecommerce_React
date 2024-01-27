@@ -2,8 +2,9 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
-import Items from './components/Items/Items'; // Import ProductScreen component
-
+import Items from './components/Items/Items';
+import Footer from './components/Footer/Footer';
+import CartProvider from './Store/CartProvider';
 const App = () => {
   const productsArr = [
     {
@@ -29,11 +30,14 @@ const App = () => {
   ];
 
   return (
-    <>
-      <Navbar />
-      <Header />
-      <Items productsArr={productsArr} />
-    </>
+    <CartProvider>
+      <>
+        <Navbar />
+        <Header />
+        <Items productsArr={productsArr} />
+        <Footer />
+      </>
+    </CartProvider>
   );
 }
 
