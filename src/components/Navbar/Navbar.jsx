@@ -12,13 +12,13 @@ const CustomNavbar = () => {
       <BootstrapNavbar className='nav__con'>
         <Container style={{ justifyContent: 'center', paddingLeft: '200px' }}>
           <Nav>
-            <Nav.Link href="#home" style={{ color: 'white' }}>
+            <Nav.Link href="/" style={{ color: 'white' }}>
               Home
             </Nav.Link>
-            <Nav.Link href="#features" style={{ color: 'white' }}>
+            <Nav.Link href="/store" style={{ color: 'white' }}>
               Store
             </Nav.Link>
-            <Nav.Link href="#pricing" style={{ color: 'white' }}>
+            <Nav.Link href="/about" style={{ color: 'white' }}>
               About
             </Nav.Link>
           </Nav>

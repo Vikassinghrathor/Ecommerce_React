@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa6";
 
 import './Footer.css';
 
-export default function App() {
+export default function Footer() {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between border-bottom' style={{backgroundColor: '#56ccf2' , paddingLeft: '100px'}}>
@@ -38,3 +38,5 @@ export default function App() {
     </MDBFooter>
   );
 }
+
+

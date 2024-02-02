@@ -1,43 +1,21 @@
-// App.jsx
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Header from './components/Header/Header';
-import Items from './components/Items/Items';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Store from './Pages/Product_Store/Store';
+import AboutUs from './Pages/AboutUs/AboutUs';
 import CartProvider from './Store/CartProvider';
-const App = () => {
-  const productsArr = [
-    {
-      title: 'Colors',
-      price: 100,
-      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-    },
-    {
-      title: 'Black and white Colors',
-      price: 50,
-      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-    },
-    {
-      title: 'Yellow and Black Colors',
-      price: 70,
-      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-    },
-    {
-      title: 'Blue Color',
-      price: 100,
-      imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
-    },
-  ];
 
+function App() {
   return (
-    <CartProvider>
-      <>
-        <Navbar />
-        <Header />
-        <Items productsArr={productsArr} />
-        <Footer />
-      </>
-    </CartProvider>
+    <Router>
+      <CartProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+      </CartProvider>
+    </Router>
   );
 }
 
