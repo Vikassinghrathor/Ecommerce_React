@@ -32,7 +32,7 @@ const Store = () => {
   return (
     <CartProvider>
       <>
-      <Navbar/>
+      <Navbar showHeaderCartButton={true}/>
       <Header />
       <Items productsArr={productsArr} />
       <Footer/>

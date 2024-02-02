@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer';
 const AboutUs = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar showHeaderCartButton={false} />
       <Header />
       <section id="about">
         <h2>About</h2>
