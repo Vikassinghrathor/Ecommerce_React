@@ -1,58 +1,43 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './Home.css';
 
+const tourData = [
+  { date: 'JUL16', place: 'DETROIT, MI', specPlace: 'DTE ENERGY MUSIC THEATRE' },
+  { date: 'JUL19', place: 'TORONTO, ON', specPlace: 'BUDWEISER STAGE' },
+  { date: 'JUL22', place: 'BRISTOW, VA', specPlace: 'JIGGY LUBE LIVE' },
+  { date: 'JUL29', place: 'PHOENIX, AZ', specPlace: 'AK-CHIN PAVILION' },
+  { date: 'AUG2', place: 'LAS VEGAS, NV', specPlace: 'T-MOBILE ARENA' },
+  { date: 'AUG7', place: 'CONCORD, CA', specPlace: 'CONCORD PAVILION' },
+];
+
+const TourItem = ({ date, place, specPlace }) => (
+  <div className='tour-item'>
+    <span className='tour-date'>{date}</span>
+    <span className='tour-place'>{place}</span>
+    <span className='tour-spec-place'>{specPlace}</span>
+    <button className='buy-btn'>BUY TICKETS</button>
+  </div>
+);
+
 const Home = () => {
   return (
     <>
-      <Navbar/>
-      <Header/>
+      <Navbar />
+      <Header />
       <section id='tours' className='container'>
-        <h2 style={{  fontFamily: "Metal Mania"}}>Tours</h2>
+        <h2 style={{ fontFamily: 'Metal Mania' }}>Tours</h2>
         <div>
-          <div className='tour-item'>
-            <span className='tour-date'>JUL16</span>
-            <span className='tour-place'>DETROIT, MI</span>
-            <span className='tour-spec-place'>DTE ENERGY MUSIC THEATRE</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
-          <div className='tour-item'>
-            <span className='tour-date'>JUL19</span>
-            <span className='tour-place'>TORONTO,ON</span>
-            <span className='tour-spec-place'>BUDWEISER STAGE</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
-          <div className='tour-item'>
-            <span className='tour-date'>JUL 22</span>
-            <span className='tour-place'>BRISTOW, VA</span>
-            <span className='tour-spec-place'>JIGGY LUBE LIVE</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
-          <div className='tour-item'>
-            <span className='tour-date'>JUL 29</span>
-            <span className='tour-place'>PHOENIX, AZ</span>
-            <span className='tour-spec-place'>AK-CHIN PAVILION</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
-          <div className='tour-item'>
-            <span className='tour-date'>AUG 2</span>
-            <span className='tour-place'>LAS VEGAS, NV</span>
-            <span className='tour-spec-place'>T-MOBILE ARENA</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
-          <div className='tour-item'>
-            <span className='tour-date'>AUG 7</span>
-            <span className='tour-place'>CONCORD, CA</span>
-            <span className='tour-spec-place'>CONCORD PAVILION</span>
-            <button className='buy-btn'>BUY TICKETS</button>
-          </div>
+          {tourData.map((tour, index) => (
+            <TourItem key={index} {...tour} />
+          ))}
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

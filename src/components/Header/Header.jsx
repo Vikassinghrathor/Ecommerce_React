@@ -38,10 +38,9 @@ const Header = () => {
                 padding: "20px",
                 fontSize: "30px",
                 fontWeight: "200",
-                margin: "20px auto",
+                margin: "15px auto",
                 background: "inherit",
                 color: "#56CCF2",
-                // appearance: 'auto'
               }}
             >
               <IoPlay />
