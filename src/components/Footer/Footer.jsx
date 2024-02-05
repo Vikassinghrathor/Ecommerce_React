@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBFooter } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 import { FaYoutube, FaFacebook, FaSpotify } from "react-icons/fa";
 
 import "./Footer.css";
@@ -30,31 +31,19 @@ export default function Footer() {
         <div className="footer-icons">
           <ul>
             <li>
-              <a
-                href="https://www.youtube.com"
-                target="_self"
-                rel="noopener noreferrer"
-              >
+              <Link to="https://www.youtube.com" target="_self">
                 <FaYoutube style={{ width: "100px", fontSize: "40px" }} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.spotify.com"
-                target="_self"
-                rel="noopener noreferrer"
-              >
+              <Link to="https://www.spotify.com" target="_self">
                 <FaSpotify style={{ width: "100px", fontSize: "40px" }} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com"
-                target="_self"
-                rel="noopener noreferrer"
-              >
+              <Link to="https://www.facebook.com" target="_self">
                 <FaFacebook style={{ width: "100px", fontSize: "40px" }} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
