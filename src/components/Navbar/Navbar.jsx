@@ -21,6 +21,9 @@ const CustomNavbar = ({ showHeaderCartButton }) => {
             <Nav.Link as={Link} to="/about" style={{ color: 'white' }}>
               About
             </Nav.Link>
+            <Nav.Link as={Link} to="/contact" style={{ color: 'white' }}>
+              Contact
+            </Nav.Link>
           </Nav>
         </Container>
         {showHeaderCartButton && <HeaderCartButton />}
