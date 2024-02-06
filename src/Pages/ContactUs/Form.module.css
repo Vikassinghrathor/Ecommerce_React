@@ -1,6 +1,6 @@
 /* Form.module.css */
 
-:local {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,49 +12,42 @@
   font-size: 22px;
 }
 
-:local section {
+section {
   display: block;
 }
 
-:local section h2 {
+section h2 {
   font-family: "Metal Mania";
   text-align: center;
   padding: 20px;
   font-size: 30px;
 }
 
-:local div {
+ .Form__div {
   display: block;
   margin-top: 20px;
 }
 
-:local form {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 500px;
 }
 
-:local label {
+label {
   font-size: 1.2em;
   margin-bottom: 8px;
 }
 
-:local input {
-  width: 100%;
+input {
+  width: 70%;
   padding: 10px;
   margin-bottom: 15px;
 }
 
-:local button {
-  background-color: #4caf50;
-  color: white;
-  padding: 15px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-size: 1.2em;
-}
 
-:local button:hover {
+
+.Form__btn:hover {
   background-color: #45a049;
 }
