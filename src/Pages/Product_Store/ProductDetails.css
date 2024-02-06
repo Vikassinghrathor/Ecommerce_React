@@ -1,0 +1,37 @@
+/* ProductDetails.css */
+.ProductDetailContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ProductDetailImages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ProductDetailImages img {
+  max-width: 300px; /* Set the maximum width for small images */
+  height: auto;
+  margin-right: 10px;
+}
+
+.ProductDetails {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ProductDetails h2 {
+  color: #333;
+}
+
+.ProductDetails h3 {
+  color: #555;
+}
+
+.ProductDetails p {
+  margin-bottom: 10px;
+}

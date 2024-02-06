@@ -8,8 +8,9 @@ const Items = ({ productsArr }) => {
   const cartCtx = useContext(CartContext);
   const navigate = useNavigate();
   const addToCartHandler = (product) => {
+    console.log(product)
     cartCtx.addItem({
-      id: product.title,
+      id: product.id,
       name: product.title,
       price: product.price,
       amount: 1,
@@ -20,10 +21,11 @@ const Items = ({ productsArr }) => {
     navigate(`/productdetails/${product.id}`, { state: { product } });
   };
   
+  
 
   return (
     <Container>
-      <h1 style={{ textAlign: 'center' }}>Music</h1>
+      <h1 style={{ textAlign: 'center' }}>Products</h1>
       <Row>
         {productsArr.map((product, index) => (
           <Col key={index} md={4}>
