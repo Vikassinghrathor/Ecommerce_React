@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Items = ({ productsArr }) => {
   const cartCtx = useContext(CartContext);
   const navigate = useNavigate();
+
   const addToCartHandler = (product) => {
-    console.log(product)
     cartCtx.addItem({
       id: product.id,
       name: product.title,
@@ -16,12 +16,10 @@ const Items = ({ productsArr }) => {
       amount: 1,
       productDetails: product,
     });
-  
-    // Pass product information in the state object
+
+    // Use the navigate function to navigate to the product details page and pass the product as state
     navigate(`/productdetails/${product.id}`, { state: { product } });
   };
-  
-  
 
   return (
     <Container>
@@ -30,7 +28,7 @@ const Items = ({ productsArr }) => {
         {productsArr.map((product, index) => (
           <Col key={index} md={4}>
             <Card className="mb-4">
-              <Card.Img variant="top" src={product.images[0]} />
+              <Card.Img variant="top" src={product.images[0]} onClick={() => addToCartHandler(product)}/>
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>Price: ${product.price}</Card.Text>
