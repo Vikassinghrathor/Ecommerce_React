@@ -17,6 +17,7 @@
 
 .control {
   margin-bottom: 0.5rem;
+  width: 50%;
 }
 
 .control label {
@@ -35,6 +36,7 @@
   width: 100%;
   text-align: left;
   padding: 0.25rem;
+  outline: none;
 }
 
 .actions {
