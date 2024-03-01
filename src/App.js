@@ -5,6 +5,7 @@ import Store from './Pages/Product_Store/Store';
 import ProductDetail from './Pages/Product_Store/ProductDetail';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import AuthPage from './Pages/Auth/AuthPage';
 import CartProvider from './Store/CartProvider';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path='/contact' element={<ContactUs/>}/>
           <Route path='/productdetails/:productId' element={<ProductDetail />} />
+          <Route path='/login' element={<AuthPage/>}/>
         </Routes>
       </CartProvider>
     </Router>

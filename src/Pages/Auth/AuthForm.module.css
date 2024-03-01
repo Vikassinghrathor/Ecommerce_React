@@ -1,7 +1,7 @@
 .auth {
   margin: 3rem auto;
-  width: 95%;
-  max-width: 25rem;
+  width: 100%;
+  max-width: 50rem;
   border-radius: 6px;
   background-color: #38015c;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -70,4 +70,24 @@
 .actions .toggle:hover {
   background-color: transparent;
   color: #ae82cc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
 }
