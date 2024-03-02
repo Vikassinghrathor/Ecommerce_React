@@ -11,16 +11,16 @@ const HeaderCartButton = () => {
 
   const { items } = cartCtx;
 
-  const numberOfCartItems = items.reduce((curNumber, item) => {
+  const numberOfCartItems = items ? items.reduce((curNumber, item) => {
     return curNumber + item.amount;
-  }, 0);
+  }, 0) : 0;
 
   const btnClasses = `${classes.button} ${
     btnIsHighlighted ? classes.bump : ''
   }`;
 
   useEffect(() => {
-    if (items.length === 0) {
+    if (items && items.length === 0) {
       return;
     }
     setBtnIsHighlighted(true);
