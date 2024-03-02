@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="/store"
-            element={authCtx.isLoggedIn ? <Store /> : <Navigate to="/login" replace />}
+            element={<Store />}
           />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />

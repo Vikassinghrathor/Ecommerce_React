@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useRef, useContext , useEffect } from "react";
 import classes from "./AuthForm.module.css";
 import AuthContext from "../../Store/auth-context";
 import { useNavigate } from "react-router-dom";
@@ -12,10 +12,18 @@ const AuthForm = () => {
 
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [redirectToStore, setRedirectToStore] = useState(false);
 
   const switchAuthModeHandler = () => {
     setIsLogin((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    if (redirectToStore) {
+      navigate("/store");
+      setRedirectToStore(false);
+    }
+  }, [redirectToStore, navigate]);
 
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -58,7 +66,8 @@ const AuthForm = () => {
       authCtx.login(data.idToken, expirationTime.toISOString());
 
       // Redirect to the products page after successful login
-      navigate("/store", { replace: true });
+      console.log("Login successful. Redirecting to /store");
+      setRedirectToStore(true);
     } catch (error) {
       console.error("Error during login:", error.message);
     } finally {
@@ -87,7 +96,7 @@ const AuthForm = () => {
           </div>
           <div className={classes.actions}>
             {!isLoading && (
-              <button>{isLogin ? "Login" : "Create Account"}</button>
+              <button type="submit">{isLogin ? "Login" : "Create Account"}</button>
             )}
             {isLoading && <p>Sending request...</p>}
             <button
