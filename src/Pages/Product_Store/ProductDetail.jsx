@@ -1,18 +1,18 @@
 // ProductDetail.jsx
-import React, { useContext } from 'react';
-import './ProductDetails.css';
-import { useLocation } from 'react-router-dom';
-import Navbar from '../../components/Navbar/Navbar';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import { Button } from 'react-bootstrap';
-import CartContext from '../../Store/Cart-Context';
+import React, { useContext } from "react";
+import "./ProductDetails.css";
+import { useLocation } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
+import { Button } from "react-bootstrap";
+import CartContext from "../../Store/Cart-Context";
 
 const ProductDetail = () => {
   const location = useLocation();
   const cartCtx = useContext(CartContext);
 
-  console.log('Location in ProductDetail:', location);
+  console.log("Location in ProductDetail:", location);
 
   if (!location || !location.state || !location.state.product) {
     return <div className="ProductDetailContainer">No product selected</div>;
@@ -36,7 +36,7 @@ const ProductDetail = () => {
         <h2>{product.title}</h2>
         <div className="ProductDetailImages">
           {product.images.map((image, index) => (
-            <img key={index} src={image} alt={`Product ${index + 1}`} />
+            <img key={index} src={image} alt={`Product ${index + 1}`} loading="lazy" />
           ))}
         </div>
         <div className="ProductDetails">
