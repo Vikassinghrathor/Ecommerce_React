@@ -1,0 +1,21 @@
+.infoContainer {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  font-family: open , sans;
+  font-size: 24px;
+  letter-spacing: 0.6%;
+  font-weight: 600px;
+  color: #1C2024;
+}
+
+.totaltext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  height: 48px;
+  width: 792px;
+  margin-left: 120px;
+  padding: 0px 0px 16px 0px;
+}

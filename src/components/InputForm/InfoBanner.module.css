@@ -1,0 +1,37 @@
+.box {
+  display: flex; /* Make the box a flex container */
+  align-items: center; /* Center items vertically */
+  width: 792px;
+  height: 82px;
+  border-radius: 16px;
+  border: 1px solid #D3D4DB;
+  margin-top: 60px;
+}
+
+.textbox {
+  display: flex; /* Make the textbox a flex container */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: flex-start; /* Align items to the start of the column */
+  justify-content: center; /* Center items horizontally */
+  width: 720px;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.heading {
+  font-family: 'open sans';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C2024;
+  padding-top: 10px; /* Adjusted padding for less spacing */
+}
+
+.text {
+  font-family: 'open sans';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #60646C;
+  margin-top: 5px; /* Adjust the margin for spacing between heading and text */
+}

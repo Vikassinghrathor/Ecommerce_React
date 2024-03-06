@@ -41,6 +41,7 @@ const Header = () => {
                 margin: "15px auto",
                 background: "inherit",
                 color: "#56CCF2",
+                objectFit: 'cover'
               }}
             >
               <IoPlay />

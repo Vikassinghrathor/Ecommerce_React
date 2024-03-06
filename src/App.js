@@ -8,6 +8,7 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import AuthPage from './Pages/Auth/AuthPage';
 import CartProvider from './Store/CartProvider';
 import AuthContext from './Store/auth-context';
+import Checkout from './Pages/Checkout/Checkout';
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -28,6 +29,7 @@ function App() {
             path="/login"
             element={authCtx.isLoggedIn ? <Navigate to="/store" replace /> : <AuthPage />}
           />
+          <Route path='/checkout' element={<Checkout/>} />
         </Routes>
       </CartProvider>
     </Router>
