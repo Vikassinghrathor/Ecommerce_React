@@ -24,17 +24,26 @@ const Items = ({ productsArr }) => {
   return (
     <Container>
       <h1 style={{ textAlign: "center" }}>Products</h1>
-      <Row>
+      <Row className="mb-4">
         {productsArr.map((product, index) => (
-          <Col key={index} md={4}>
-            <Card className="mb-4">
+          <Col key={index} md={4} className="mb-4">
+            <Card className="mb-4" style={{ height: "100%" , margin: '10px'}}>
               <Card.Img
                 variant="top"
-                src={product.images[0]}
+                src={
+                  (product.images &&
+                    product.images.length > 0 &&
+                    product.images[0]) ||
+                  "https://via.placeholder.com/150"
+                }
                 alt={`Product ${index + 1}`}
-                loading="lazy"
                 onClick={() => addToCartHandler(product)}
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/150";
+                }}
+                style={{ height: "200px", objectFit: "cover", padding: "10px"}}
               />
+
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>Price: ${product.price}</Card.Text>
