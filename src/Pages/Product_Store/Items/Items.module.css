@@ -1,0 +1,50 @@
+/* Items.module.css */
+
+/* Center the container content */
+.Container {
+  text-align: center;
+}
+
+/* Style for product cards */
+.ProductCard {
+  margin: 0px;
+  height: 100%; 
+}
+
+/* Style for card image */
+.CardImage {
+  height: 180px;
+  object-fit: contain;
+  width: 100%; /* Ensure images fill the entire width of the card */
+  border-radius: 8px 8px 0 0; /* Add border-radius to the top corners */
+}
+
+/* Style for card title */
+.CardTitle {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Style for card text */
+.CardText {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Style for add to cart button */
+.AddToCartBtn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Add border-radius to the bottom corners */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for add to cart button */
+.AddToCartBtn:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}

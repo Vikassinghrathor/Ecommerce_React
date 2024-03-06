@@ -1,7 +1,9 @@
+/* Home.module.css */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px 30px;
+  margin-bottom: 100px;
 }
 
 section {
@@ -15,41 +17,27 @@ section h2 {
   font-size: 30px;
 }
 
-h2 {
-  display: block;
-  /* font-size: 1.5em; */
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-div {
-  display: block;
-}
-
-#tours .tour-item {
+.tour-item {
   display: flex;
   border-bottom: 1px solid black;
   padding: 10px;
 }
 
-#tours .tour-item .tour-date {
+.tour-item .tour-date {
   width: 12%;
 }
 
-#tours .tour-item .tour-place {
+.tour-item .tour-place {
   width: 25%;
   color: #777;
 }
 
-#tours .tour-item .tour-spec-place {
+.tour-item .tour-spec-place {
   width: 53%;
   color: #777;
 }
 
-#tours .tour-item .buy-btn {
+.tour-item .buy-btn {
   width: 20%;
   background: #56CCF2;
   color: white;

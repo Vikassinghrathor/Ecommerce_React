@@ -18,6 +18,7 @@
 .control {
   margin-bottom: 0.5rem;
   width: 50%;
+  margin: auto;
 }
 
 .control label {

@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import './Home.css';
+import classes from './Home.module.css';  // Import CSS module
 
 const tourData = [
   { date: 'JUL16', place: 'DETROIT, MI', specPlace: 'DTE ENERGY MUSIC THEATRE' },
@@ -14,11 +14,11 @@ const tourData = [
 ];
 
 const TourItem = ({ date, place, specPlace }) => (
-  <div className='tour-item'>
-    <span className='tour-date'>{date}</span>
-    <span className='tour-place'>{place}</span>
-    <span className='tour-spec-place'>{specPlace}</span>
-    <button className='buy-btn'>BUY TICKETS</button>
+  <div className={classes['tour-item']}> {/* Use the correct syntax for accessing class names */}
+    <span className={classes['tour-date']}>{date}</span> {/* Use the correct syntax for accessing class names */}
+    <span className={classes['tour-place']}>{place}</span> {/* Use the correct syntax for accessing class names */}
+    <span className={classes['tour-spec-place']}>{specPlace}</span> {/* Use the correct syntax for accessing class names */}
+    <button className={classes['buy-btn']}>BUY TICKETS</button> {/* Use the correct syntax for accessing class names */}
   </div>
 );
 
@@ -27,7 +27,7 @@ const Home = () => {
     <>
       <Navbar />
       <Header />
-      <section id='tours' className='container'>
+      <section id='tours' className={classes.container}> {/* Use the correct syntax for accessing class names */}
         <h2 style={{ fontFamily: 'Metal Mania' }}>Tours</h2>
         <div>
           {tourData.map((tour, index) => (

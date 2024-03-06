@@ -1,6 +1,6 @@
-// Remove the import statement for 'classes'
+// Form.jsx
 import React, { useState } from "react";
-import "./Form.module.css";
+import classes from "./Form.module.css"; // Import the module-based CSS directly
 
 const Form = (props) => {
   const [inputValues, setInputValues] = useState({
@@ -8,6 +8,8 @@ const Form = (props) => {
     EmailId: "",
     PhoneNumber: "",
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +31,15 @@ const Form = (props) => {
       }
 
       console.log("Data submitted successfully:", inputValues);
+
+      setIsSubmitted(true);
+
+      // Clear input values
+      setInputValues({
+        Name: "",
+        EmailId: "",
+        PhoneNumber: "",
+      });
     } catch (error) {
       console.error("Error submitting data:", error.message);
     }
@@ -44,49 +55,54 @@ const Form = (props) => {
 
   return (
     <>
-      <section id="contact">
+      <section id="contact" className={classes.ContactSection}>
         <h2>Contact Us</h2>
-        <div className="Form__div">
-          <form onSubmit={onSubmit}>
-            <label htmlFor="Name">Name</label>
-            <input
-              name="Name"
-              id="Name"
-              type="text"
-              value={inputValues.Name}
-              onChange={handleInput}
-            />
-            <label htmlFor="EmailId">Email ID</label>
-            <input
-              name="EmailId"
-              id="EmailId"
-              type="text"
-              value={inputValues.EmailId}
-              onChange={handleInput}
-            />
-            <label htmlFor="PhoneNumber">Phone Number</label>
-            <input
-              name="PhoneNumber"
-              id="PhoneNumber"
-              type="number"
-              value={inputValues.PhoneNumber}
-              onChange={handleInput}
-            />
-            <button
-              type="submit"
-              style={{
-                backgroundColor: "#4caf50",
-                color: "white",
-                padding: "15px",
-                border: "none",
-                cursor: "pointer",
-                width: "40%",
-                fontSize: "1.2em",
-              }}
-            >
-              Submit
-            </button>
-          </form>
+        <div className={classes.FormContainer}>
+          {isSubmitted ? (
+            <p className={classes.ThankYouMessage}>Thank you for contacting us.</p>
+          ) : (
+            <form onSubmit={onSubmit} className={classes.ContactForm}>
+              <label htmlFor="Name" className={classes.FormLabel}>
+                Name
+              </label>
+              <input
+                name="Name"
+                id="Name"
+                type="text"
+                value={inputValues.Name}
+                onChange={handleInput}
+                className={classes.FormInput}
+              />
+              <label htmlFor="EmailId" className={classes.FormLabel}>
+                Email ID
+              </label>
+              <input
+                name="EmailId"
+                id="EmailId"
+                type="email" // Corrected type to "email"
+                value={inputValues.EmailId}
+                onChange={handleInput}
+                className={classes.FormInput}
+              />
+              <label htmlFor="PhoneNumber" className={classes.FormLabel}>
+                Phone Number
+              </label>
+              <input
+                name="PhoneNumber"
+                id="PhoneNumber"
+                type="tel" // Assuming a phone number, use "tel"
+                value={inputValues.PhoneNumber}
+                onChange={handleInput}
+                className={classes.FormInput}
+              />
+              <button
+                type="submit"
+                className={classes.FormBtn} // Add the class directly
+              >
+                Submit
+              </button>
+            </form>
+          )}
         </div>
       </section>
     </>

@@ -1,6 +1,6 @@
 // ProductDetail.jsx
 import React, { useContext, useState } from "react";
-import "./ProductDetails.css";
+import classes from "./ProductDetails.module.css";
 import { useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
@@ -56,9 +56,9 @@ const ProductDetail = () => {
     <>
       <Navbar showHeaderCartButton={true} />
       <Header />
-      <div className="ProductDetailContainer">
+      <div className={classes.ProductDetailContainer}>
         <h2>{product.title}</h2>
-        <Slider className="ProductDetailImages" {...sliderSettings}>
+        <Slider className={classes.ProductDetailImages} {...sliderSettings}>
           {images.map((image, index) => (
             <img
               key={index}
@@ -68,7 +68,7 @@ const ProductDetail = () => {
             />
           ))}
         </Slider>
-        <div className="ProductDetails">
+        <div className={classes.ProductDetails}>
           <h3>Product Details</h3>
           <p>Price: ${product.price}</p>
           <p>Description: {product.description}</p>

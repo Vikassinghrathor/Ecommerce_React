@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import CartContext from "../../../Store/Cart-Context";
 import { useNavigate } from "react-router-dom";
+import classes from "./Items.module.css"; // Import the module-based CSS
 
 const Items = ({ productsArr }) => {
   const cartCtx = useContext(CartContext);
@@ -22,12 +23,12 @@ const Items = ({ productsArr }) => {
   };
 
   return (
-    <Container>
-      <h1 style={{ textAlign: "center" }}>Products</h1>
-      <Row className="mb-4">
+    <Container className={classes.Container}>
+      <h1>Products</h1>
+      <Row style={{justifyContent: "center"}}>
         {productsArr.map((product, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="mb-4" style={{ height: "100%" , margin: '10px'}}>
+          <Col key={index} md={4} style={{flex: "none", maxWidth: "26%", margin: "10px"}} >
+            <Card className={classes.ProductCard}>
               <Card.Img
                 variant="top"
                 src={
@@ -41,15 +42,16 @@ const Items = ({ productsArr }) => {
                 onError={(e) => {
                   e.target.src = "https://via.placeholder.com/150";
                 }}
-                style={{ height: "200px", objectFit: "cover", padding: "10px"}}
+                className={classes.CardImage}
               />
 
               <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>Price: ${product.price}</Card.Text>
+                <Card.Title className={classes.CardTitle}>{product.title}</Card.Title>
+                <Card.Text className={classes.CardText}>Price: ${product.price}</Card.Text>
                 <Button
                   variant="primary"
                   onClick={() => addToCartHandler(product)}
+                  className={classes.AddToCartBtn}
                 >
                   Add to Cart
                 </Button>
