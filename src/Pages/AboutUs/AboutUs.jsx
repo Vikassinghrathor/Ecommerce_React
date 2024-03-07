@@ -1,19 +1,21 @@
+// AboutUs.jsx
+
 import React from "react";
 import Header from "../../components/Header/Header";
 import AboutImage from "../../assests/Band Members.png";
-import './AboutUs.css';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
+import classes from "./AboutUs.module.css";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const AboutUs = () => {
   return (
     <>
       <Navbar showHeaderCartButton={false} />
       <Header />
-      <section id="about">
+      <section id={classes.about}>
         <h2>About</h2>
         <div>
-          <img src={AboutImage} alt="error" loading="lazy"/>
+          <img src={AboutImage} alt="error" loading="lazy" />
           <p>
             Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
             sorrows, hates no prosecutors will unfold in the enduring of which
@@ -41,7 +43,7 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

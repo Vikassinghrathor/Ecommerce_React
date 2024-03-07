@@ -2,7 +2,7 @@
 import React from "react";
 import { IoPlay } from "react-icons/io5";
 import {useLocation } from "react-router-dom"; 
-import "./Header.css";
+import classes from "./Header.module.css";
 
 const Header = () => {
   const location = useLocation();
@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="Header">
+      <div className={classes.Header}>
         <h1>The Generics</h1>
         {isHomePage && (
           <>

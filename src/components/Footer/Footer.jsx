@@ -3,7 +3,7 @@ import { MDBFooter } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import { FaYoutube, FaFacebook, FaSpotify } from "react-icons/fa";
 
-import "./Footer.css";
+import classes from "./Footer.module.css";
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="footer-icons">
+        <div className={classes['footer-icons']}>
           <ul>
             <li>
               <Link to="https://www.youtube.com" target="_self">

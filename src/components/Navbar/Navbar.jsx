@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css';
+import classes from './Navbar.module.css';
 import Container from 'react-bootstrap/Container';
 import HeaderCartButton from '../Header/HeaderCartButton';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import BootstrapNavbar from 'react-bootstrap/Navbar';
 const CustomNavbar = ({ showHeaderCartButton }) => {
   return (
     <>
-      <BootstrapNavbar className='nav__con'>
+      <BootstrapNavbar className={classes.nav__con}>
         <Container style={{ justifyContent: 'center', paddingLeft: showHeaderCartButton ? '200px' : '0' }}>
           <Nav>
             <Nav.Link as={Link} to="/" style={{ color: 'white' }}>
