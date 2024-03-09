@@ -1,7 +1,7 @@
 // Header.jsx
 import React from "react";
 import { IoPlay } from "react-icons/io5";
-import {useLocation } from "react-router-dom"; 
+import { useLocation } from "react-router-dom";
 import classes from "./Header.module.css";
 
 const Header = () => {
@@ -10,25 +10,25 @@ const Header = () => {
 
   return (
     <>
-      <div className={classes.Header}>
+      <div className={`${classes.Header} ${isHomePage ? classes.home : ''}`}>
         <h1>The Generics</h1>
         {isHomePage && (
           <>
-              <button
-                style={{
-                  display: "block",
-                  border: "1px solid #56CCF2",
-                  padding: "15px 30px",
-                  fontSize: "23px",
-                  fontWeight: "200",
-                  margin: "10px auto",
-                  background: "inherit",
-                  cursor: "pointer",
-                  color: "white",
-                }}
-              >
-                Get Our Latest Album
-              </button>
+            <button
+              style={{
+                display: "block",
+                border: "1px solid #56CCF2",
+                padding: "15px 30px",
+                fontSize: "23px",
+                fontWeight: "200",
+                margin: "10px auto",
+                background: "inherit",
+                cursor: "pointer",
+                color: "white",
+              }}
+            >
+              Get Our Latest Album
+            </button>
             <button
               style={{
                 cursor: "pointer",

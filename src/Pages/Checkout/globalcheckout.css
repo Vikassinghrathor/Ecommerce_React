@@ -1,13 +1,13 @@
-/* globalCheckout.css */
-
-@import 'tailwindcss/base';
+/* Import Tailwind CSS globally */
+/* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@layer components{
- .checkout-global {
+@import 'tailwindcss/utilities'; */
+
+/* Apply global styles within the .checkout-global scope */
+.checkout-global {
   --primary-color: #000000;
 
-  /* Rest of your styles */
+  /* Rest of your styles for .checkout-global */
   .input-container {
     position: relative;
     display: flex;
@@ -76,4 +76,17 @@
     justify-content: space-between;
   }
 }
+
+/* Reset global styles outside of the .checkout-global scope */
+:not(.checkout-global) .input-container,
+:not(.checkout-global) .ps-menu-icon,
+:not(.checkout-global) .ps-sidebar-container,
+:not(.checkout-global) .ps-submenu-content,
+:not(.checkout-global) .ps-collapsed,
+:not(.checkout-global) .ps-menu-root,
+:not(.checkout-global) .ps-menu-root>ul,
+:not(.checkout-global) .ps-sidebar-root,
+:not(.checkout-global) .ps-menu-button,
+:not(.checkout-global) .ps-menu-label {
+  all: unset !important;
 }

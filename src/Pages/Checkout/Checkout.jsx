@@ -1,11 +1,12 @@
 // Checkout.jsx
+
 import React from 'react';
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
 import Footer from '../../components/Footer/Footer';
 import QuerySection from '../../components/QuerySection/QuerySection';
 import ComingSoon from '../../components/ComingSoon/ComingSoon';
-import './globalcheckout.css';
+import './globalcheckout.css'; // Import the global styles
 import localStyles from './Checkout.module.css';
 
 const Checkout = () => {
