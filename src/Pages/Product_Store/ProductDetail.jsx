@@ -1,4 +1,3 @@
-// ProductDetail.jsx
 import React, { useContext, useState } from "react";
 import classes from "./ProductDetails.module.css";
 import { useLocation } from "react-router-dom";
@@ -18,7 +17,6 @@ const ProductDetail = () => {
 
   console.log("Location in ProductDetail:", location);
 
-  // Declare state at the top level
   const [quantity, setQuantity] = useState(1);
 
   if (!location || !location.state || !location.state.product) {
@@ -27,7 +25,6 @@ const ProductDetail = () => {
 
   const { product } = location.state;
 
-  // Ensure the images array is properly formatted
   const images = Array.isArray(product.images) ? product.images : [];
 
   const addToCartHandler = () => {

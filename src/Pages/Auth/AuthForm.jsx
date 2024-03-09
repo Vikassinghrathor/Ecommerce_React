@@ -65,7 +65,6 @@ const AuthForm = () => {
 
       authCtx.login(data.idToken, expirationTime.toISOString());
 
-      // Redirect to the products page after successful login
       console.log("Login successful. Redirecting to /store");
       setRedirectToStore(true);
     } catch (error) {

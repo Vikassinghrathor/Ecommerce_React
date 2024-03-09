@@ -1,6 +1,5 @@
-// Form.jsx
 import React, { useState } from "react";
-import classes from "./Form.module.css"; // Import the module-based CSS directly
+import classes from "./Form.module.css";
 
 const Form = (props) => {
   const [inputValues, setInputValues] = useState({
@@ -34,7 +33,6 @@ const Form = (props) => {
 
       setIsSubmitted(true);
 
-      // Clear input values
       setInputValues({
         Name: "",
         EmailId: "",

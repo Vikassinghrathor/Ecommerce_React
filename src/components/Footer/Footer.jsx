@@ -1,3 +1,5 @@
+// Footer.jsx
+
 import React from "react";
 import { MDBFooter } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
@@ -7,14 +9,14 @@ import classes from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
+    <MDBFooter bgColor="light" className={`text-center text-lg-start text-muted ${classes.footer}`}>
       <section
         className="d-flex justify-content-center justify-content-lg-between border-bottom"
         style={{ backgroundColor: "#56ccf2", paddingLeft: "100px" }}
       >
         <div className="me-5 d-none d-lg-block">
           <span
-            className="footer-title"
+            className={classes['footer-title']}
             style={{
               textAlign: "center",
               color: "white",
