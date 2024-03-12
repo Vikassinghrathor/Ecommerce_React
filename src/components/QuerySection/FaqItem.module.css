@@ -1,0 +1,116 @@
+/* FaqItem.module.css */
+
+.bgWhiteA700 {
+  background-color: #FFFFFF;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.borderBlueGray200 {
+  border-color: #CBD5E0;
+}
+
+.borderSolid {
+  border-style: solid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+.gap6 {
+  gap: 1.5rem;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.h6 {
+  height: 1.5rem;
+}
+
+.w6 {
+  width: 1.5rem;
+}
+
+.textGray90001 {
+  color: #1A202C;
+}
+
+.textLg {
+  font-size: 1.125rem;
+}
+
+.leading24 {
+  line-height: 1.5rem;
+}
+
+.maxW586 {
+  max-width: 36.625rem;
+}
+
+.rounded16 {
+  border-radius: 1rem;
+}
+
+.mdMaxWFull {
+  max-width: 100%;
+}
+
+.textBase {
+  font-size: 1rem;
+}
+
+.textGray70001 {
+  color: #4A5568;
+}
+
+.smPx5 {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.px7 {
+  padding-right: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.py6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.wAuto {
+  width: auto;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}

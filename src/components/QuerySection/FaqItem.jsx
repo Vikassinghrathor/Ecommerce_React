@@ -1,13 +1,21 @@
 import React from "react";
-import { Img,Text } from "../CheckoutPay/export";
+import { Img, Text } from "../CheckoutPay/export";
+import styles from "./FaqItem.module.css";
 
 const FaqItem = ({ title, description, isDescriptionVisible, onClick }) => {
   return (
-    <div className="bg-white-A700 border border-blue_gray-200 border-solid flex flex-1 flex-col items-start justify-start sm:px-5 px-7 py-6 rounded-[16px] w-full" onClick={onClick}>
-      <div className="flex flex-col items-start justify-start w-full">
-        <div className="flex sm:flex-col flex-row gap-6 items-center justify-start w-full">
+    <div
+      className={`${styles.bgWhiteA700} ${styles.border} ${styles.borderBlueGray200} ${styles.borderSolid} ${styles.flex} ${styles.flex1} ${styles.flexCol} ${styles.itemsStart} ${styles.justifyStart} ${styles.smPx5} ${styles.px7} ${styles.py6} ${styles.rounded16} ${styles.fullWidth}`}
+      onClick={onClick}
+    >
+      <div
+        className={`${styles.flex} ${styles.flexCol} ${styles.itemsStart} ${styles.justifyStart} ${styles.fullWidth}`}
+      >
+        <div
+          className={`${styles.flex} ${styles.flexRow} ${styles.gap6} ${styles.itemsCenter} ${styles.justifyStart} ${styles.fullWidth}`}
+        >
           <Img
-            className="h-6 w-6"
+            className={`${styles.h6} ${styles.w6}`}
             src={
               isDescriptionVisible
                 ? "images/img_close_gray_700_01.svg"
@@ -16,7 +24,7 @@ const FaqItem = ({ title, description, isDescriptionVisible, onClick }) => {
             alt={isDescriptionVisible ? "close_One" : "plus_Two"}
           />
           <Text
-            className="flex-1 text-gray-900_01 text-lg w-auto"
+            className={`${styles.flex1} ${styles.textGray90001} ${styles.textLg} ${styles.wAuto}`}
             size="txtOpenSansSemiBold18"
           >
             {title}
@@ -24,9 +32,11 @@ const FaqItem = ({ title, description, isDescriptionVisible, onClick }) => {
         </div>
       </div>
       {isDescriptionVisible && (
-        <div className="flex flex-col items-center justify-center pb-6 md:pl-10 pl-12 sm:pl-5 w-full">
+        <div
+          className={`${styles.flex} ${styles.flexCol} ${styles.itemsCenter} ${styles.justifyCenter} ${styles.pb6} ${styles.mdPl10} ${styles.pl12} ${styles.smPl5} ${styles.fullWidth}`}
+        >
           <Text
-            className="leading-[24.00px] max-w-[586px] md:max-w-full text-base text-gray-700_01"
+            className={`${styles.leading24} ${styles.maxW586} ${styles.mdMaxWFull} ${styles.textBase} ${styles.textGray70001}`}
             size="txtOpenSans16"
           >
             {description}

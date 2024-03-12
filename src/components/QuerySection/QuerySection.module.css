@@ -1,0 +1,90 @@
+/* DesktopFaqsection.module.css */
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap6 {
+  gap: 1.5rem;
+}
+
+.itemsStart {
+  align-items: start;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.h6 {
+  height: 1.5rem;
+}
+
+.w6 {
+  width: 1.5rem;
+}
+
+.textGray90001 {
+  color: #1A202C;
+}
+
+.textLg {
+  font-size: 1.125rem;
+}
+
+.leading24 {
+  line-height: 1.5rem;
+}
+
+.maxW586 {
+  max-width: 36.625rem;
+}
+
+.rounded16 {
+  border-radius: 1rem;
+}
+
+.smPx5 {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.px7 {
+  padding-right: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.py6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.wAuto {
+  width: auto;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.bgGray30001 {
+  background-color: #CBD5E0;
+}
+
+.padding120 {
+  padding: 120px;
+}
+
+.bgGray50001 {
+  background-color: #F9FAFB;
+}

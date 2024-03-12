@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import FaqItem from "./FaqItem";
-
-import {Img, Line, Text } from "../CheckoutPay/export";
+import { Img, Line, Text } from "../CheckoutPay/export";
 import PaymentButton from "../InputForm/Payment/PaymentButton";
+import styles from "./QuerySection.module.css";
 
 const DesktopFaqsection = (props) => {
-  const [isDescriptionVisible, setIsDescriptionVisible] = useState(Array(4).fill(false));
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(
+    Array(4).fill(false)
+  );
   const customButtonStyle = {
-    backgroundColor: '#000000',
-    color: '#ffffff',
-    marginTop: '20px',
-    width: '129px',
-    height: '50px',
-    justifyContent: 'center',
-    borderRadius: '12px'
+    backgroundColor: "#000000",
+    color: "#ffffff",
+    marginTop: "20px",
+    width: "129px",
+    height: "50px",
+    justifyContent: "center",
+    borderRadius: "12px",
   };
 
   const handleToggleDescription = (index) => {
@@ -24,50 +26,66 @@ const DesktopFaqsection = (props) => {
 
   return (
     <>
-      <div className={props.className}>
-      <div style={{padding: '120px'}}> 
-        <div className="flex md:flex-col flex-row gap-6 items-start justify-start w-auto md:w-full">
-          <div className="flex flex-col gap-8 items-start justify-start w-[486px] sm:w-full">
-            <div className="flex flex-col items-start justify-start w-full">
-              <div className="flex flex-col items-start justify-start pb-4 w-full">
-                <Text
-                  className="text-2xl md:text-[22px] text-gray-900_01 sm:text-xl tracking-[0.14px] w-auto"
-                  size="txtOpenSansSemiBold24"
+      <div className={`${styles.bgGray50001} ${props.className}`}>
+        <div className={`${styles.padding120}`}>
+          <div
+            className={`${styles.flexRow} ${styles.mdFlexCol} ${styles.gap6} ${styles.itemsStart} ${styles.justifyStart} ${styles.wAuto} ${styles.mdFullWidth}`}
+          >
+            <div
+              className={`${styles.flexCol} ${styles.gap8} ${styles.itemsStart} ${styles.justifyStart} ${styles.w486} ${styles.smFullWidth}`}
+            >
+              <div
+                className={`${styles.flexCol} ${styles.itemsStart} ${styles.justifyStart} ${styles.wFull}`}
+              >
+                <div
+                  className={`${styles.flexCol} ${styles.itemsStart} ${styles.justifyStart} ${styles.pb4} ${styles.wFull}`}
                 >
-                  {props?.headingtext}
-                </Text>
+                  <Text
+                    className={`${styles.text2xl} ${styles.mdText22} ${styles.textGray90001} ${styles.smTextXl} ${styles.tracking014px} ${styles.wAuto}`}
+                    size="txtOpenSansSemiBold24"
+                  >
+                    {props?.headingtext}
+                  </Text>
+                </div>
+                <div
+                  className={`${styles.flexCol} ${styles.itemsStart} ${styles.justifyStart} ${styles.pb4} ${styles.w446} ${styles.smFullWidth}`}
+                >
+                  <Text
+                    className={`${styles.textBase} ${styles.textGray70001} ${styles.wAuto}`}
+                    size="txtOpenSans16"
+                  >
+                    {props?.paragraphtext}
+                  </Text>
+                </div>
               </div>
-              <div className="flex flex-col items-start justify-start pb-4 w-[446px] sm:w-full">
-                <Text
-                  className="text-base text-gray-700_01 w-auto"
-                  size="txtOpenSans16"
+              <div
+                className={`${styles.bgGray50001} ${styles.flexRow} ${styles.gap5} ${styles.itemsStart} ${styles.justifyBetween} ${styles.p6} ${styles.smPx5} ${styles.rounded16} ${styles.w446} ${styles.smFullWidth}`}
+              >
+                <div
+                  className={`${styles.flexCol} ${styles.gap5} ${styles.itemsStart} ${styles.justifyStart} ${styles.wFull}`}
                 >
-                  {props?.paragraphtext}
-                </Text>
+                  <Text
+                    className={`${styles.leading26} ${styles.maxW240} ${styles.mdMaxWFull} ${styles.textGray90001} ${styles.textLg}`}
+                    size="txtOpenSansSemiBold18"
+                  >
+                    {props?.stillneedhelp}
+                  </Text>
+                  <PaymentButton
+                    title="Chat with us"
+                    buttonStyle={customButtonStyle}
+                  />
+                </div>
+                <Img
+                  className={`${styles.h100} ${styles.w157}`}
+                  src="images/img_aboutillustrations.svg"
+                  alt="aboutillustrati"
+                />
               </div>
             </div>
-            <div className="bg-gray-50_01 flex sm:flex-col flex-row gap-5 items-start justify-between p-6 sm:px-5 rounded-[16px] w-[446px] sm:w-full">
-              <div className="flex flex-col gap-5 items-start justify-start w-full">
-                <Text
-                  className="leading-[26.00px] max-w-[240px] md:max-w-full text-gray-900_01 text-lg"
-                  size="txtOpenSansSemiBold18"
-                >
-                  {props?.stillneedhelp}
-                </Text>
-                <PaymentButton
-            title="Chat with us"
-            buttonStyle={customButtonStyle}
-           />              
-           </div>
-              <Img
-                className="h-[100px] w-[157px]"
-                src="images/img_aboutillustrations.svg"
-                alt="aboutillustrati"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-6 items-start justify-start max-w-[690px] w-full">
-          {[
+            <div
+              className={`${styles.flexCol} ${styles.gap6} ${styles.itemsStart} ${styles.justifyStart} ${styles.maxW690} ${styles.wFull}`}
+            >
+              {[
                 {
                   title: props.herearesomeof,
                   description: props.descriptionTwo,
@@ -93,9 +111,11 @@ const DesktopFaqsection = (props) => {
                   onClick={() => handleToggleDescription(index)}
                 />
               ))}
+            </div>
           </div>
-        </div>
-        <Line className="bg-gray-300_01 h-px w-full" />
+          <Line
+            className={`${styles.bgGray30001} ${styles.hPx} ${styles.wFull}`}
+          />
         </div>
       </div>
     </>

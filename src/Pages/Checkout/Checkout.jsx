@@ -4,7 +4,7 @@ import InputForm from "../../components/InputForm/InputForm";
 import Footer from "../../components/Footer/Footer";
 import QuerySection from "../../components/QuerySection/QuerySection";
 import ComingSoon from "../../components/ComingSoon/ComingSoon";
-import classes from "./globalcheckout.module.css";
+import classes from "./index.css";
 import Navbar from "../../components/Navbar/Navbar";
 
 const Checkout = () => {

@@ -1,17 +1,12 @@
-/* Reset base styles */
-html {
-  box-sizing: border-box;
-}
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Apply global styles */
 :root {
   --primary-color: #000000;
 }
-
+/* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
 [type='text']:focus,
 [type='email']:focus,
 [type='url']:focus,
@@ -28,47 +23,32 @@ select:focus {
   border-color: var(--primary-color);
 }
 
-.react-datepicker-wrapper .react-datepicker__input-container input {
+.react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;
   width: 100%;
   padding: 0px;
 }
-
 .react-datepicker__day.react-datepicker__day--keyboard-selected {
   background: none;
   color: black;
 }
-
-input:focus, textarea:focus {
-  outline: none !important;
+input:focus, textarea:focus{
+  outline:none !important;
   outline-offset: 0 !important;
-  --tw-ring-offset-width: none !important;
+  --tw-ring-offset-width:none !important;
 }
 
-li:focus-visible {
+li:focus-visible{
   outline: none;
 }
 
-li:hover {
+li:hover{
   cursor: pointer;
 }
 
-.tab-panel--selected {
-  animation-name: tabPanel;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
-}
-
-@keyframes tabPanel {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+.tab-panel--selected { animation-name: tabPanel; animation-duration: 300ms; animation-timing-function: linear; }
+@keyframes tabPanel { from { opacity: 0; } to { opacity: 1; } }
 /* Input style */
 .input-container {
   position: relative;
@@ -92,57 +72,81 @@ li:hover {
   justify-content: start !important;
   margin: 0 !important;
 }
-
-.ps-menu-button,
-.ps-menu-icon {
+.ps-menu-button, .ps-menu-icon {
   height: unset !important;
 }
-
 .ps-menu-button:hover {
   background-color: unset !important;
 }
-
-.ps-sidebar-container,
-.ps-submenu-content {
+.ps-sidebar-container, .ps-submenu-content{
   background-color: transparent !important;
 }
-
-.ps-collapsed .ps-menu-icon {
+.ps-collapsed .ps-menu-icon{
   min-width: 100% !important;
   justify-content: center !important;
 }
-
-.ps-collapsed {
+.ps-collapsed{
   width: 80px !important;
 }
-
-.ps-sidebar-container,
-.ps-menu-root,
-.ps-menu-root>ul {
-  width: 100%;
-  display: flex;
+.ps-sidebar-container, .ps-menu-root,.ps-menu-root>ul{
+  width:100%;
+  display:flex;
   flex-direction: column;
 }
-
-.ps-sidebar-root {
+.ps-sidebar-root{
   min-width: unset !important;
   border: none !important;
 }
-
-.ps-collapsed,
-.ps-collapsed .ps-menu-root,
-.ps-collapsed .ps-menu-button {
+.ps-collapsed, .ps-collapsed .ps-menu-root, .ps-collapsed .ps-menu-button{
   padding-left: 0px !important;
   padding-right: 0px !important;
   margin-left: unset !important;
   margin-right: unset !important;
 }
-
-.ps-collapsed ul {
+.ps-collapsed ul{
   align-items: center;
 }
-
-.ps-menu-label {
+.ps-menu-label{
   display: flex;
   justify-content: space-between;
+}
+
+.Items_AddToCartBtn__WZhPe {
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.Form_FormBtn__typ-m{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary{
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+h1{
+  font-size: 50px;
 }
