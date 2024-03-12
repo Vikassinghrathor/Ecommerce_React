@@ -19,7 +19,7 @@
 }
 
 .justifyStart {
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .fullWidth {
@@ -40,6 +40,7 @@
 
 .textLg {
   font-size: 1.125rem;
+  padding-top: 20px;
 }
 
 .leading24 {
@@ -56,7 +57,7 @@
 
 .smPx5 {
   padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-left: 0.80rem;
 }
 
 .px7 {
@@ -71,6 +72,7 @@
 
 .wAuto {
   width: auto;
+  padding: 10px;
 }
 
 .cursorPointer {
@@ -87,4 +89,8 @@
 
 .bgGray50001 {
   background-color: #F9FAFB;
+}
+
+.imgchat{
+  padding: 100px;
 }

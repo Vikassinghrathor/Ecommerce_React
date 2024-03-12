@@ -11,7 +11,7 @@ const DesktopFaqsection = (props) => {
   const customButtonStyle = {
     backgroundColor: "#000000",
     color: "#ffffff",
-    marginTop: "20px",
+    marginTop: "80px",
     width: "129px",
     height: "50px",
     justifyContent: "center",
@@ -76,7 +76,7 @@ const DesktopFaqsection = (props) => {
                   />
                 </div>
                 <Img
-                  className={`${styles.h100} ${styles.w157}`}
+                  className={styles.imgchat}
                   src="images/img_aboutillustrations.svg"
                   alt="aboutillustrati"
                 />
