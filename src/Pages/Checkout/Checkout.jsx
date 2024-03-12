@@ -4,13 +4,12 @@ import InputForm from "../../components/InputForm/InputForm";
 import Footer from "../../components/Footer/Footer";
 import QuerySection from "../../components/QuerySection/QuerySection";
 import ComingSoon from "../../components/ComingSoon/ComingSoon";
-import "./globalcheckout.module.css";
-import localStyles from "./Checkout.module.css";
+import classes from "./globalcheckout.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 
 const Checkout = () => {
   return (
-    <div className={`checkout-global ${localStyles.checkout}`}>
+    <div className={classes['checkout-global']}>
       <Navbar />
       <Header />
       <InputForm />

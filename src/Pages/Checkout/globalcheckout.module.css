@@ -2,8 +2,10 @@
 /* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities'; */
+@tailwind components;
 
 /* Apply global styles within the .checkout-global scope */
+@layer components{
 .checkout-global {
   --primary-color: #000000;
 
@@ -89,4 +91,5 @@
 :not(.checkout-global) .ps-menu-button,
 :not(.checkout-global) .ps-menu-label {
   all: unset !important;
+}
 }
