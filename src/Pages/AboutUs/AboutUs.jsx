@@ -15,7 +15,7 @@ const AboutUs = () => {
       <section id={classes.about}>
         <h2>About</h2>
         <div>
-          <img src={AboutImage} alt="error" loading="lazy" />
+          <img src={AboutImage} alt="Band Member" loading="lazy" />
           <p>
             Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
             sorrows, hates no prosecutors will unfold in the enduring of which
