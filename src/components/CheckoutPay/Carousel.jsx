@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Button, Img } from "./export";
+import classes from '../../Pages/Checkout/index.css';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -10,6 +11,7 @@ function ControlledCarousel() {
   };
 
   return (
+    <div className={classes['checkout-global']}>
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <div className="h-[198px] relative rounded-[16px] w-full">
@@ -19,11 +21,6 @@ function ControlledCarousel() {
             alt="rectangleSixtySix"
           />
           <div className="absolute inset-[0] justify-center m-auto rounded-[16px] w-full">
-            <Img
-              className="h-[198px] m-auto object-cover rounded-[16px] w-full"
-              src="images/Booking_Summary_carousel.png"
-              alt="rectangleSixtyFive"
-            />
             <div className="absolute flex flex-row h-max inset-[0] items-center justify-between m-auto px-3 w-[352px]">
               <Button
                 className="flex h-8 items-center justify-center w-8"
@@ -79,6 +76,7 @@ function ControlledCarousel() {
       
       {/* Add additional Carousel.Item components with their content */}
     </Carousel>
+    </div>
   );
 }
 
